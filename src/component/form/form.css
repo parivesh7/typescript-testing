@@ -1,0 +1,45 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 10px;
+  /* width: 100%; */
+}
+.input-f {
+  width: 100%;
+  border-radius: 50px;
+  padding: 20px 30px;
+  font-size: 25px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.input-f:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.submit-btn {
+  position: absolute;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+  margin: 12px;
+  right: 0px;
+  border: none;
+  font-size: 15px;
+  background-color: rgb(11, 110, 156);
+  color: #fff;
+  transition: 0.2s;
+  box-shadow: 0 0 10px black;
+}
+
+.submit-btn:hover {
+  background-color: rgb(32, 141, 192);
+  cursor: pointer;
+}
+.submit-btn:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
