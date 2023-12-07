@@ -8,6 +8,7 @@ const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todoList, setTodoList] = useState<Todo[]>([]);
 
+  console.log("todoList: App", todoList);
   const addTask = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (todo) {
