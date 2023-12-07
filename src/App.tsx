@@ -11,7 +11,9 @@ const App: React.FC = () => {
   const addTask = (e: React.SyntheticEvent) => {
     e.preventDefault();
     if (todo) {
-      setTodoList([...todoList, { id: Date.now(), isDone: false, todo }]);
+      const uniqueID =
+        todoList.length === 0 ? 1 : todoList[todoList.length - 1].id + 1;
+      setTodoList([...todoList, { id: uniqueID, isDone: false, todo }]);
       setTodo("");
     }
   };
@@ -20,7 +22,7 @@ const App: React.FC = () => {
     <div className="App">
       <h2>This is the typescript testing app!!!</h2>
       <InputField todo={todo} setTodo={setTodo} addTask={addTask} />
-      <Card todoList={todoList} />
+      <Card todoList={todoList} setTodoList={setTodoList} />
     </div>
   );
 };
